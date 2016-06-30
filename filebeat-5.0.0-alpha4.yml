@@ -22,6 +22,8 @@ filebeat:
         rvl: 
           client: ul-dbg
           index: ul-dbg-filebeat
+        beat:
+          version: 5.0.0-alpha4		  
       
       ignore_older: 168h
       close_older: 30h
