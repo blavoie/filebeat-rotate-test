@@ -9,7 +9,7 @@ del /q registry.*
 curl -XDELETE http://ul-rvl-pr-ela01.ul.ca:9200/ul-dbg-filebeat-*
 
 :: run filebeat
-start filebeat.exe -c filebeat.windows.yml -e -v 
+start filebeat-1.2.3.exe -c filebeat.windows.yml -e -v 
 ::start filebeat.exe -c filebeat.windows.yml -e  -d "*"
 
 :: start generator
