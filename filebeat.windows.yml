@@ -37,11 +37,6 @@ output:
     loadbalance: true
     bulk_max_size: 2048
 
-############################# Shipper #########################################
-
-shipper:
-  tags: ["filebeat-rotate-test"]
-
 ############################# Logging #########################################
 
 logging:
