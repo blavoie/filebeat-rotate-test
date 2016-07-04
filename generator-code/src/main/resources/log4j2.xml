@@ -8,6 +8,7 @@
             fileName="${logDir}/application.log"
             filePattern="${logDir}/$${date:yyyy-MM}/%d{yyyy-MM-dd}-application-%i.log"
             append="true">
+            <DefaultRolloverStrategy max="100" />
             <PatternLayout>
                 <!--Pattern>%d{yyyy-MM-dd HH:mm:ss}\t%m%n</Pattern-->
                 <Pattern>%m%n</Pattern>

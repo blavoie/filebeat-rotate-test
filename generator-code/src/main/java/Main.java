@@ -15,7 +15,7 @@ public class Main {
     private static final long FEEDBACK_EVENTS = 10000;  // Number of events to print feedback
     private static final long REGISTRY_EVENTS = 15000;  // Interval between each registry copy
     private static final String REGISTRY_FILE = "c:/filebeat-rotate-test/registry.dat";
-    
+
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) throws InterruptedException {
@@ -26,7 +26,7 @@ public class Main {
             if (i % FEEDBACK_EVENTS == 0) {
                 System.out.println(i);
             }
-           
+
             if (i % REGISTRY_EVENTS == 0) {
                 File src = new File(REGISTRY_FILE);
                 File dst = new File(REGISTRY_FILE + "." + i);

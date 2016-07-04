@@ -1,3 +1,6 @@
 target
 registry.*
 logs
+
+/registry-v5.dat
+/registry-v5.dat.old

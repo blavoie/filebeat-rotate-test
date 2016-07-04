@@ -4,7 +4,7 @@ filebeat:
   spool_size: 4096
   publish_async: false
   idle_timeout: 5s
-  registry_file: c:\filebeat-rotate-test\registry.dat
+  registry_file: c:\filebeat-rotate-test\registry-v1.dat
   
   prospectors:
     -
@@ -23,12 +23,12 @@ filebeat:
           client: ul-dbg
           index: ul-dbg-filebeat
         beat:
-          version: 1.2.3
+          version: v1
       
       ignore_older: 168h
       close_older: 30h
       scan_frequency: 10s
-      force_close_files: false  
+      force_close_files: true
 
 ############################# Output ##########################################
 
@@ -39,6 +39,11 @@ output:
     loadbalance: true
     bulk_max_size: 2048
 
+############################# Shipper #########################################
+
+shipper:
+  tags: ["debug"]
+  
 ############################# Logging #########################################
 
 logging:
@@ -46,7 +51,7 @@ logging:
   to_files: true
   files:    
     path: c:\filebeat-rotate-test\
-    name: filebeat-rotate-test.log
+    name: filebeat-v1.log
     rotateeverybytes: 10485760 # = 10MB
     keepfiles: 10
   level: info
